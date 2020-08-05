@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1082
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RetornaJuros", "RetornaJuros\RetornaJuros.csproj", "{09A65E67-759F-40C9-A0BE-996BB756292D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{77846D4D-ACB7-4501-8DA6-0F32F3FCD29D} = {77846D4D-ACB7-4501-8DA6-0F32F3FCD29D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculaJuros", "CalculaJuros\CalculaJuros.csproj", "{9D1B6707-E7D0-4194-9AB5-AA18DA45A70C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{77846D4D-ACB7-4501-8DA6-0F32F3FCD29D} = {77846D4D-ACB7-4501-8DA6-0F32F3FCD29D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JurosAPI.Business", "JurosAPI.Business\JurosAPI.Business.csproj", "{77846D4D-ACB7-4501-8DA6-0F32F3FCD29D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09A65E67-759F-40C9-A0BE-996BB756292D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A65E67-759F-40C9-A0BE-996BB756292D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A65E67-759F-40C9-A0BE-996BB756292D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A65E67-759F-40C9-A0BE-996BB756292D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D1B6707-E7D0-4194-9AB5-AA18DA45A70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D1B6707-E7D0-4194-9AB5-AA18DA45A70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D1B6707-E7D0-4194-9AB5-AA18DA45A70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D1B6707-E7D0-4194-9AB5-AA18DA45A70C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77846D4D-ACB7-4501-8DA6-0F32F3FCD29D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77846D4D-ACB7-4501-8DA6-0F32F3FCD29D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77846D4D-ACB7-4501-8DA6-0F32F3FCD29D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77846D4D-ACB7-4501-8DA6-0F32F3FCD29D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0536A424-30A0-44D2-8F5E-271BC664E195}
+	EndGlobalSection
+EndGlobal
