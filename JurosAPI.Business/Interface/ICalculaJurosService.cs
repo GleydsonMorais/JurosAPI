@@ -7,6 +7,6 @@ namespace JurosAPI.Business.Interface
 {
     public interface ICalculaJurosService
     {
-        Task<decimal> CalculaJuros(decimal valorInicial, int tempo);
+        Task<string> CalculaJuros(decimal valorInicial, int tempo);
     }
 }

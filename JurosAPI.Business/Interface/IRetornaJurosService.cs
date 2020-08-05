@@ -6,6 +6,6 @@ namespace JurosAPI.Business.Interface
 {
     public interface IRetornaJurosService
     {
-        double GetTaxaJuros();
+        string GetTaxaJuros();
     }
 }

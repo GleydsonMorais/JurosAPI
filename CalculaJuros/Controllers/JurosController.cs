@@ -21,6 +21,6 @@ namespace CalculaJuros.Controllers
         
         [HttpGet]
         [Route("api/juros/calculajuros/{valorInicial}/{tempo}")]
-        public async Task<decimal> CalculaJuros(decimal valorInicial, int tempo) => await _calculaJurosService.CalculaJuros(valorInicial, tempo);
+        public async Task<string> CalculaJuros(decimal valorInicial, int tempo) => await _calculaJurosService.CalculaJuros(valorInicial, tempo);
     }
 }

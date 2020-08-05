@@ -11,7 +11,7 @@ namespace JurosAPI.Business.Repositories
 {
     public interface IJurosRepository
     {
-        Task<double> GetTaxaJuros();
+        Task<string> GetTaxaJuros();
     }
 
     public class JurosRepository : IJurosRepository
@@ -23,7 +23,7 @@ namespace JurosAPI.Business.Repositories
             _urlAPIConfig = urlAPIConfig.Value;
         }
 
-        public async Task<double> GetTaxaJuros()
+        public async Task<string> GetTaxaJuros()
         {
             RestClient Client = new RestClient(_urlAPIConfig.RetornaJuros);
             RestRequest request = new RestRequest("api/juros/taxaJuros", Method.GET);
@@ -31,7 +31,7 @@ namespace JurosAPI.Business.Repositories
             System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
             //System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Ssl3;
 
-            IRestResponse<double> response = await Client.ExecuteAsync<double>(request);
+            IRestResponse<string> response = await Client.ExecuteAsync<string>(request);
 
             return response.Data;
         }

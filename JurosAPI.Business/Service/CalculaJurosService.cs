@@ -16,11 +16,11 @@ namespace JurosAPI.Business.Service
             _jurosRepository = jurosRepository;
         }
 
-        public async Task<decimal> CalculaJuros(decimal valorInicial, int tempo)
+        public async Task<string> CalculaJuros(decimal valorInicial, int tempo)
         {
             var taxaJuros = await _jurosRepository.GetTaxaJuros();
 
-            return Math.Round((valorInicial * Convert.ToDecimal(Math.Pow((1 + taxaJuros), tempo))), 2);
+            return (valorInicial * (decimal)(Math.Pow((1 + Convert.ToDouble(taxaJuros)), tempo))).ToString("F");
         }
     }
 }

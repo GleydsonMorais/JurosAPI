@@ -22,6 +22,6 @@ namespace RetornaJuros.Controllers
         // GET: api/juros/taxajuros
         [HttpGet]
         [Route("api/juros/taxaJuros")]
-        public double GetTaxaJuros() => _retornaJurosService.GetTaxaJuros();
+        public string GetTaxaJuros() => _retornaJurosService.GetTaxaJuros();
     }
 }

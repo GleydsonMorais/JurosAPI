@@ -16,6 +16,6 @@ namespace JurosAPI.Business.Service
             _jurosConfig = jurosConfig.Value;
         }
 
-        public double GetTaxaJuros() => Convert.ToDouble(_jurosConfig.TaxaDeJurosAtual);
+        public string GetTaxaJuros() => _jurosConfig.TaxaDeJurosAtual;
     }
 }
