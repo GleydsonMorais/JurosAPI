@@ -32,7 +32,7 @@ namespace RetornaJuros
             services.Configure<JurosConfig>(Configuration.GetSection("Juros"));
 
             //Add applicarion services
-            services.AddTransient<IRetornaJurosService, JurosService>();
+            services.AddTransient<IRetornaJurosService, RetornaJurosService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

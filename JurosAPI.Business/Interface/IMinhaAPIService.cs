@@ -4,8 +4,8 @@ using System.Text;
 
 namespace JurosAPI.Business.Interface
 {
-    public interface IRetornaJurosService
+    public interface IMinhaAPIService
     {
-        double GetTaxaJuros();
+        string ShowMeTheCode();
     }
 }

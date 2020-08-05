@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using JurosAPI.Business.Interface;
+using JurosAPI.Business.Model.Config;
+using JurosAPI.Business.Repositories;
+using JurosAPI.Business.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +29,15 @@ namespace CalculaJuros
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Options
+            services.Configure<UrlAPIConfig>(Configuration.GetSection("UrlAPI"));
+            services.Configure<MinhaAPIConfig>(Configuration.GetSection("MinhaAPI"));
+
+            //Add applicarion services
+            services.AddTransient<ICalculaJurosService, CalculaJurosService>();
+            services.AddTransient<IJurosRepository, JurosRepository>();
+            services.AddTransient<IMinhaAPIService, MinhaAPIService>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
