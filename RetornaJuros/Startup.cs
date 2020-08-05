@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using JurosAPI.Business.Interface;
+using JurosAPI.Business.Model.Config;
+using JurosAPI.Business.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +28,12 @@ namespace RetornaJuros
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Options
+            services.Configure<JurosConfig>(Configuration.GetSection("Juros"));
+
+            //Add applicarion services
+            services.AddTransient<IRetornaJurosService, JurosService>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
