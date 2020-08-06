@@ -43,12 +43,11 @@ namespace JurosAPI.Test.IntegrationTests
             response.Content.Headers.ContentType.ToString().Should().Be("text/plain; charset=utf-8");
         }
 
-        [Fact]
-        public void CalculaJuros()
+        [Theory]
+        [InlineData(100, 5)]
+        public void CalculaJuros(decimal valorInicial, int tempo)
         {
             var expected = "105,10";
-            decimal valorInicial = 100;
-            int tempo = 5;
             string taxaJuros = "0,01";
 
             var result = (valorInicial * (decimal)(Math.Pow((1 + Convert.ToDouble(taxaJuros)), tempo))).ToString("F");
